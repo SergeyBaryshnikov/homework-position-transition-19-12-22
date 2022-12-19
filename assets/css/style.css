@@ -1,0 +1,41 @@
+.user-card {
+  box-sizing: border-box;
+  font-size: 24px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+.user-card__img {
+  width: 250px;
+  height: 250px;
+  border: 2px solid rgb(53, 114, 76);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 10 0px;
+}
+.user-card__name {
+  position: relative;
+  text-transform: capitalize;
+  width: 140px;
+  margin: auto;
+}
+.user-card__name::before,
+.user-card__name::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: black;
+}
+.user-card__name::before {
+  right: 0;
+}
+.user-card__img:hover ~ ::before {
+  width: 100%;
+  transition: 3s 2s;
+}
+.user-card__img:hover ~ ::after {
+  width: 100%;
+  transition: 3s;
+}
